@@ -1,7 +1,7 @@
 #!/bin/bash
 CORES=$(nproc)
 ROOTFS=/mnt/boot
-git clone --depth 1 -b JH7110_VisionFive2_devel https://github.com/starfive-tech/linux.git
+git clone --depth 1 -b JH7110_VisionFive2_devel https://github.com/Headcrabed/linux-starfive.git
 cd linux || exit 1
 make starfive_visionfive2_defconfig CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv || exit 2
 #make CROSS_COMPILE=riscv64-linux-gnu- ARCH=riscv menuconfig
